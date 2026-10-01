@@ -2,6 +2,7 @@
 
 import { FormEvent, useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 const categories = ["Featured", "Music", "Drawing & Painting", "Marketing", "Animation", "Social Media", "UI/UX Design", "Creative Marketing", "Digital Illustration", "Film & Video", "Crafts", "Freelance & Entrepreneurship", "Graphic Design", "Photography", "Productivity", "Web Development", "Data Science", "Cooking"];
@@ -63,7 +64,7 @@ export default function Home() {
 
     <section id="creators" className={styles.growthSection}><div className={styles.growthCopy}><p className={styles.sectionKicker}>Learn from the best</p><h2>Your Path to Professional Growth Starts Here!</h2><p>Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.</p><div className={styles.stats}><div><strong>12K</strong><span>Students</span></div><div><strong>70+</strong><span>Courses</span></div><div><strong>16</strong><span>Creators</span></div></div></div><div className={styles.growthVisual}><Image src="/assets/feature.png" alt="Course dashboard preview" fill sizes="(max-width: 760px) 90vw, 620px" /><div className={styles.revenueCard}><span>Total Revenue</span><strong>$120.29</strong><b>+12%</b></div></div></section>
 
-    <section id="join" className={styles.ctaSection}><div><p className={styles.sectionKicker}>Start learning today</p><h2>Make room for a smarter future.</h2><p>Find the course that moves your next idea forward.</p></div><a className={styles.darkButton} href="#signin">Join ByteSpace <span>↗</span></a></section>
-    <footer className={styles.footer}><Logo /><p>Knowledge that keeps moving with you.</p><div><a href="#courses">Courses</a><a href="#creators">Creators</a><a href="#signin">Sign In</a></div></footer>
+    <section id="join" className={styles.ctaSection}><div><p className={styles.sectionKicker}>Start learning today</p><h2>Make room for a smarter future.</h2><p>Find the course that moves your next idea forward.</p></div><Link className={styles.darkButton} href="/signup">Join ByteSpace <span>↗</span></Link></section>
+    <footer className={styles.footer}><Logo /><p>Knowledge that keeps moving with you.</p><div><a href="#courses">Courses</a><a href="#creators">Creators</a><Link href="/login">Sign In</Link></div></footer>
   </main>;
 }
